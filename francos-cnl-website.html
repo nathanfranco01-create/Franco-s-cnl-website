@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Franco's CNL Construction & Restoration — Licensed LA Contractor #1140292. Full-service remodeling, restoration, framing, roofing, ADU construction across Greater Los Angeles.">
+<title>Franco's CNL Construction & Restoration | Los Angeles | Lic #1140292</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & ROOT ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#C0392B;
+  --red-dark:#922B21;
+  --red-glow:rgba(192,57,43,0.18);
+  --blue:#1A3A6B;
+  --blue-mid:#2155A3;
+  --blue-light:#3B82D4;
+  --blue-glow:rgba(59,130,212,0.15);
+  --white:#FFFFFF;
+  --off-white:#F5F6F8;
+  --near-black:#09090C;
+  --dark:#0F1015;
+  --charcoal:#161820;
+  --steel:#1E2130;
+  --panel:#252838;
+  --muted:#7A7F92;
+  --text-body:#B8BDD0;
+  --border:rgba(59,130,212,0.15);
+  --serif:'Barlow Condensed',sans-serif;
+  --sans:'Barlow',sans-serif;
+  --transition:0.28s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--near-black);color:var(--white);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--blue-mid)}
+
+/* ===== UTILITY ===== */
+.container{max-width:1240px;margin:0 auto;padding:0 40px}
+.sec-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.sec-eyebrow .bar{width:28px;height:2px;background:var(--red);flex-shrink:0}
+.sec-eyebrow span{font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--red)}
+.sec-title{font-family:var(--serif);font-size:clamp(34px,4vw,54px);font-weight:800;line-height:1.02;color:var(--white);letter-spacing:0.01em}
+.sec-title .hl{color:var(--blue-light)}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.85)}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.fade-up{animation:fadeUp 0.7s ease both}
+.delay-1{animation-delay:0.1s}
+.delay-2{animation-delay:0.2s}
+.delay-3{animation-delay:0.35s}
+.delay-4{animation-delay:0.5s}
+
+/* ===== NAVIGATION ===== */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:70px;display:flex;align-items:center;
+  background:rgba(9,9,12,0.88);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+  transition:background var(--transition),border-color var(--transition);
+}
+#navbar.scrolled{background:rgba(9,9,12,0.97);border-color:rgba(59,130,212,0.25)}
+.nav-inner{
+  width:100%;max-width:1240px;margin:0 auto;
+  padding:0 40px;display:flex;
+  align-items:center;justify-content:space-between;
+}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-logo{height:46px;width:auto;filter:drop-shadow(0 0 10px rgba(59,130,212,0.35))}
+.nav-brand-text .name{
+  font-family:var(--serif);font-size:18px;font-weight:800;
+  letter-spacing:0.06em;color:var(--white);line-height:1;display:block;
+}
+.nav-brand-text .sub{
+  font-size:9px;font-weight:500;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--blue-light);margin-top:2px;display:block;
+}
+.nav-menu{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-menu a{
+  font-size:11px;font-weight:600;letter-spacing:0.12em;
+  text-transform:uppercase;color:rgba(255,255,255,0.6);
+  padding:8px 14px;border-radius:2px;
+  transition:color var(--transition),background var(--transition);
+}
+.nav-menu a:hover{color:var(--white);background:rgba(255,255,255,0.06)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-phone{
+  font-size:12px;font-weight:600;color:rgba(255,255,255,0.55);
+  letter-spacing:0.05em;
+}
+.btn-nav{
+  font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--white);background:var(--red);
+  padding:10px 22px;border:none;cursor:pointer;
+  transition:background var(--transition),transform var(--transition);
+  display:inline-block;
+}
+.btn-nav:hover{background:var(--red-dark);transform:translateY(-1px)}
+
+/* ===== HERO ===== */
+#hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;
+  padding:70px 0 0;overflow:hidden;
+  background:var(--dark);
+}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(26,58,107,0.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(26,58,107,0.07) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+.hero-stripes{
+  position:absolute;right:0;top:0;bottom:0;width:46%;
+  display:flex;flex-direction:column;
+}
+.hero-stripe{flex:1}
+.hero-stripe:nth-child(odd){background:rgba(192,57,43,0.07)}
+.hero-stripe:nth-child(even){background:rgba(255,255,255,0.02)}
+.hero-glow-r{
+  position:absolute;top:10%;right:5%;
+  width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,58,107,0.14) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-glow-l{
+  position:absolute;bottom:10%;left:-5%;
+  width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,57,43,0.08) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1240px;margin:0 auto;
+  padding:60px 40px 80px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:40px;align-items:center;
+}
+.hero-content{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(26,58,107,0.3);
+  border:1px solid rgba(59,130,212,0.3);
+  padding:7px 16px;margin-bottom:28px;border-radius:1px;
+}
+.badge-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--blue-light);
+  animation:pulse 2.2s infinite;
+}
+.hero-badge span{
+  font-size:9px;font-weight:700;letter-spacing:0.24em;
+  text-transform:uppercase;color:var(--blue-light);
+}
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(52px,7vw,90px);
+  font-weight:900;line-height:0.92;
+  letter-spacing:-0.01em;color:var(--white);
+  margin-bottom:12px;
+}
+.hero-h1 .r{color:var(--red)}
+.hero-h1 .b{color:var(--blue-light)}
+.hero-sub{
+  font-family:var(--serif);font-size:clamp(18px,2vw,24px);
+  font-weight:400;color:rgba(255,255,255,0.4);
+  letter-spacing:0.06em;margin-bottom:24px;
+}
+.hero-desc{
+  font-size:14px;font-weight:300;line-height:1.9;
+  color:var(--text-body);max-width:500px;margin-bottom:40px;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.btn-primary{
+  font-family:var(--sans);font-size:12px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--white);background:var(--red);
+  padding:16px 36px;display:inline-block;
+  transition:background var(--transition),transform var(--transition);
+  border:2px solid var(--red);
+}
+.btn-primary:hover{background:var(--red-dark);border-color:var(--red-dark);transform:translateY(-2px)}
+.btn-secondary{
+  font-family:var(--sans);font-size:12px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--white);background:transparent;
+  padding:16px 36px;display:inline-block;
+  border:2px solid rgba(255,255,255,0.2);
+  transition:border-color var(--transition),color var(--transition);
+}
+.btn-secondary:hover{border-color:var(--blue-light);color:var(--blue-light)}
+.hero-stats{
+  display:flex;gap:0;
+  border-top:1px solid rgba(59,130,212,0.2);
+  padding-top:32px;
+}
+.hstat{
+  padding-right:32px;margin-right:32px;
+  border-right:1px solid rgba(59,130,212,0.2);
+}
+.hstat:last-child{border-right:none;padding-right:0;margin-right:0}
+.hstat .n{
+  font-family:var(--serif);font-size:38px;font-weight:900;
+  color:var(--blue-light);display:block;line-height:1;
+}
+.hstat .l{
+  font-size:9px;font-weight:600;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--muted);
+  margin-top:5px;display:block;
+}
+.hero-visual{
+  display:flex;justify-content:center;align-items:center;
+  position:relative;
+}
+.hero-logo-ring{
+  position:absolute;width:420px;height:420px;border-radius:50%;
+  border:1px solid rgba(59,130,212,0.1);
+}
+.hero-logo-ring-2{
+  position:absolute;width:340px;height:340px;border-radius:50%;
+  border:1px solid rgba(192,57,43,0.08);
+}
+.hero-logo-img{
+  position:relative;z-index:2;
+  width:320px;height:auto;
+  filter:drop-shadow(0 0 50px rgba(59,130,212,0.22)) drop-shadow(0 30px 70px rgba(0,0,0,0.7));
+  animation:floatY 5s ease-in-out infinite;
+}
+
+/* ===== LICENSE BANNER ===== */
+#lic-banner{
+  background:var(--blue);
+  border-top:2px solid var(--red);
+  border-bottom:2px solid var(--red);
+  padding:0;overflow:hidden;
+}
+.lic-ticker{white-space:nowrap;padding:14px 0}
+.lic-ticker-inner{
+  display:inline-flex;gap:0;
+  animation:ticker 22s linear infinite;
+}
+.lic-item{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:0 36px;
+  border-right:1px solid rgba(255,255,255,0.12);
+}
+.lic-item span{
+  font-size:10px;font-weight:700;letter-spacing:0.2em;
+  text-transform:uppercase;color:rgba(255,255,255,0.85);
+}
+.lic-item .hl{color:var(--white);font-size:12px}
+.lic-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:rgba(255,255,255,0.35);flex-shrink:0;
+}
+
+/* ===== SERVICES ===== */
+#services{padding:110px 0;background:var(--charcoal)}
+.svc-header{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:40px;align-items:flex-end;margin-bottom:64px;
+}
+.svc-header-desc{
+  font-size:14px;line-height:1.9;color:var(--muted);
+  align-self:flex-end;
+}
+.svc-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+}
+.svc-card{
+  background:var(--steel);
+  padding:44px 34px;
+  position:relative;overflow:hidden;
+  transition:background var(--transition);
+  cursor:default;
+}
+.svc-card:hover{background:var(--panel)}
+.svc-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--red),var(--blue-light));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card-num{
+  font-family:var(--serif);font-size:11px;font-weight:700;
+  color:var(--blue-light);letter-spacing:0.12em;
+  opacity:0.4;display:block;margin-bottom:20px;
+}
+.svc-icon{
+  width:42px;height:42px;
+  background:rgba(26,58,107,0.25);
+  border:1px solid rgba(59,130,212,0.2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--blue-light);margin-bottom:20px;
+  transition:background var(--transition),border-color var(--transition);
+}
+.svc-card:hover .svc-icon{background:rgba(26,58,107,0.4);border-color:rgba(59,130,212,0.4)}
+.svc-card h3{
+  font-family:var(--serif);font-size:22px;font-weight:800;
+  color:var(--white);margin-bottom:12px;letter-spacing:0.02em;
+  line-height:1.1;
+}
+.svc-card p{font-size:13px;line-height:1.85;color:var(--muted)}
+.svc-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--blue-light);
+  margin-top:20px;
+  transition:gap var(--transition);
+}
+.svc-card:hover .svc-more{gap:10px}
+
+/* ===== GALLERY / PROJECTS ===== */
+#projects{padding:110px 0;background:var(--dark)}
+.proj-header{
+  display:flex;justify-content:space-between;
+  align-items:flex-end;margin-bottom:48px;
+}
+.proj-note{
+  font-size:13px;color:var(--muted);
+  max-width:300px;text-align:right;line-height:1.7;
+}
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:240px 220px;
+  gap:3px;
+}
+.proj-item{
+  position:relative;overflow:hidden;
+  background:var(--steel);cursor:pointer;
+}
+.proj-item.c6{grid-column:span 6}
+.proj-item.c4{grid-column:span 4}
+.proj-item.c5{grid-column:span 5}
+.proj-item.c7{grid-column:span 7}
+.proj-item.c3{grid-column:span 3}
+.p-bg{
+  position:absolute;inset:0;
+  transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+.proj-item:hover .p-bg{transform:scale(1.05)}
+.p1 .p-bg{background:linear-gradient(140deg,#1C1008 0%,#301A08 60%,#1A1208 100%)}
+.p2 .p-bg{background:linear-gradient(140deg,#081018 0%,#0C1C30 60%,#061018 100%)}
+.p3 .p-bg{background:linear-gradient(140deg,#180808 0%,#2C0C0C 60%,#180A0A 100%)}
+.p4 .p-bg{background:linear-gradient(140deg,#0C1018 0%,#101828 60%,#0A1020 100%)}
+.p5 .p-bg{background:linear-gradient(140deg,#101508 0%,#1C2210 60%,#121808 100%)}
+.p-pattern{position:absolute;inset:0;opacity:0.13}
+.p1 .p-pattern{background:repeating-linear-gradient(42deg,transparent,transparent 9px,rgba(192,57,43,0.5) 9px,rgba(192,57,43,0.5) 10px)}
+.p2 .p-pattern{background:repeating-linear-gradient(0deg,transparent,transparent 7px,rgba(59,130,212,0.6) 7px,rgba(59,130,212,0.6) 8px)}
+.p3 .p-pattern{background:repeating-linear-gradient(-42deg,transparent,transparent 7px,rgba(192,57,43,0.6) 7px,rgba(192,57,43,0.6) 8px)}
+.p4 .p-pattern{background:repeating-linear-gradient(90deg,transparent,transparent 9px,rgba(26,58,107,0.7) 9px,rgba(26,58,107,0.7) 10px)}
+.p5 .p-pattern{background:repeating-linear-gradient(28deg,transparent,transparent 9px,rgba(59,130,212,0.5) 9px,rgba(59,130,212,0.5) 10px)}
+.p-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.1) 55%,transparent 100%);
+}
+.p-label{position:absolute;bottom:0;left:0;right:0;padding:20px 22px}
+.p-type{
+  font-size:8px;font-weight:700;letter-spacing:0.24em;
+  text-transform:uppercase;color:var(--blue-light);
+  display:block;margin-bottom:4px;
+}
+.p-name{
+  font-family:var(--serif);font-size:17px;font-weight:800;
+  color:var(--white);line-height:1.1;display:block;
+}
+.p-name.lg{font-size:22px}
+.ba-tag{
+  position:absolute;top:14px;right:14px;
+  background:var(--red);color:var(--white);
+  font-size:8px;font-weight:800;letter-spacing:0.18em;
+  text-transform:uppercase;padding:5px 11px;
+}
+.proj-cta{
+  margin-top:40px;text-align:center;
+}
+.proj-cta p{
+  font-size:13px;color:var(--muted);margin-bottom:20px;
+}
+
+/* ===== TRUST / WHY US ===== */
+#why{
+  padding:0;background:var(--blue);
+  position:relative;overflow:hidden;
+}
+#why::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red) 0%,var(--white) 33%,var(--blue-light) 66%,var(--red) 100%);
+}
+#why::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red) 0%,var(--white) 33%,var(--blue-light) 66%,var(--red) 100%);
+}
+.why-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.why-card{
+  padding:56px 36px;text-align:center;
+  border-right:1px solid rgba(255,255,255,0.08);
+  position:relative;
+  transition:background var(--transition);
+}
+.why-card:last-child{border-right:none}
+.why-card:hover{background:rgba(0,0,0,0.2)}
+.why-icon{
+  width:58px;height:58px;margin:0 auto 20px;
+  border:1px solid rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--white);
+  transition:border-color var(--transition),background var(--transition);
+}
+.why-card:hover .why-icon{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.08)}
+.why-big{
+  font-family:var(--serif);font-size:52px;font-weight:900;
+  color:var(--white);display:block;line-height:1;margin-bottom:6px;
+}
+.why-card h4{
+  font-family:var(--serif);font-size:20px;font-weight:800;
+  color:var(--white);margin-bottom:10px;letter-spacing:0.03em;
+}
+.why-card p{font-size:12px;line-height:1.75;color:rgba(255,255,255,0.6)}
+.why-lic{
+  font-family:var(--serif);font-size:15px;font-weight:700;
+  color:rgba(255,255,255,0.9);display:block;margin-top:6px;
+  letter-spacing:0.08em;
+}
+
+/* ===== PROCESS ===== */
+#process{padding:110px 0;background:var(--charcoal)}
+.process-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;margin-top:60px;
+}
+.proc-step{
+  background:var(--steel);padding:44px 32px;
+  position:relative;overflow:hidden;
+}
+.proc-num{
+  font-family:var(--serif);font-size:72px;font-weight:900;
+  color:rgba(59,130,212,0.08);line-height:1;
+  position:absolute;top:16px;right:20px;
+}
+.proc-icon{
+  width:44px;height:44px;
+  background:rgba(192,57,43,0.15);
+  border:1px solid rgba(192,57,43,0.25);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);margin-bottom:24px;
+}
+.proc-step h3{
+  font-family:var(--serif);font-size:21px;font-weight:800;
+  color:var(--white);margin-bottom:10px;
+}
+.proc-step p{font-size:12px;line-height:1.8;color:var(--muted)}
+.proc-connector{
+  position:absolute;top:50%;right:-16px;
+  width:32px;height:2px;background:var(--red);
+  transform:translateY(-50%);z-index:2;
+}
+.proc-step:last-child .proc-connector{display:none}
+
+/* ===== TESTIMONIALS ===== */
+#reviews{padding:110px 0;background:var(--dark)}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;margin-top:60px;
+}
+.review-card{
+  background:var(--steel);padding:48px 36px;
+  position:relative;
+}
+.review-flag{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red) 33.33%,var(--white) 33.33%,var(--white) 66.66%,var(--blue) 66.66%);
+}
+.review-stars{display:flex;gap:3px;margin-bottom:20px}
+.star{
+  width:12px;height:12px;background:var(--red);
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+.review-quote{
+  font-family:var(--serif);font-size:15px;font-weight:400;
+  font-style:italic;line-height:1.75;
+  color:rgba(255,255,255,0.82);margin-bottom:28px;
+}
+.review-quote::before{
+  content:'\201C';
+  font-size:54px;font-weight:900;color:var(--blue-light);
+  opacity:0.3;display:block;line-height:0.9;
+  margin-bottom:10px;
+}
+.review-author{display:flex;align-items:center;gap:12px}
+.author-av{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--blue);border:2px solid rgba(59,130,212,0.35);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:14px;font-weight:800;
+  color:var(--white);flex-shrink:0;
+}
+.author-name{font-size:13px;font-weight:600;color:var(--white);display:block}
+.author-loc{
+  font-size:10px;color:var(--muted);
+  letter-spacing:0.06em;margin-top:2px;display:block;
+}
+
+/* ===== SERVICE AREAS ===== */
+#areas{padding:80px 0;background:var(--charcoal);border-top:1px solid var(--border)}
+.areas-inner{display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:center}
+.areas-list{
+  display:flex;flex-wrap:wrap;gap:8px;
+}
+.area-tag{
+  font-size:11px;font-weight:600;letter-spacing:0.1em;
+  color:rgba(255,255,255,0.7);
+  border:1px solid rgba(59,130,212,0.25);
+  padding:7px 14px;
+  transition:border-color var(--transition),color var(--transition),background var(--transition);
+  cursor:default;
+}
+.area-tag:hover{border-color:var(--blue-light);color:var(--white);background:rgba(59,130,212,0.08)}
+
+/* ===== CONTACT ===== */
+#contact{padding:110px 0;background:var(--dark);position:relative;overflow:hidden}
+#contact::before{
+  content:'';position:absolute;
+  top:-150px;right:-150px;width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(26,58,107,0.1) 0%,transparent 70%);
+}
+.contact-grid{
+  display:grid;grid-template-columns:5fr 7fr;
+  gap:80px;align-items:start;position:relative;
+}
+.contact-left h2{
+  font-family:var(--serif);
+  font-size:clamp(36px,4.5vw,58px);
+  font-weight:900;color:var(--white);
+  line-height:1.0;margin-bottom:16px;
+  letter-spacing:0.01em;
+}
+.contact-left h2 .hl{color:var(--blue-light)}
+.contact-left > p{
+  font-size:13px;line-height:1.9;
+  color:var(--muted);margin-bottom:40px;
+}
+.contact-detail{
+  display:flex;align-items:center;gap:14px;
+  padding:18px 0;border-bottom:1px solid rgba(59,130,212,0.15);
+}
+.contact-detail:first-of-type{border-top:1px solid rgba(59,130,212,0.15)}
+.c-icon{
+  width:38px;height:38px;flex-shrink:0;
+  background:rgba(26,58,107,0.3);
+  border:1px solid rgba(59,130,212,0.22);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--blue-light);
+}
+.c-label{
+  font-size:8px;font-weight:700;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--muted);display:block;
+}
+.c-value{
+  font-family:var(--serif);font-size:19px;font-weight:700;
+  color:var(--white);display:block;margin-top:2px;letter-spacing:0.02em;
+}
+.c-value a{color:inherit;transition:color var(--transition)}
+.c-value a:hover{color:var(--blue-light)}
+.lic-box{
+  margin-top:28px;display:inline-flex;align-items:center;gap:14px;
+  border:1px solid rgba(59,130,212,0.25);
+  padding:14px 20px;background:rgba(26,58,107,0.1);
+}
+.lic-box img{height:44px;width:auto;filter:drop-shadow(0 0 6px rgba(59,130,212,0.3))}
+.lic-box-text .lb-label{
+  font-size:8px;font-weight:700;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--blue-light);display:block;
+}
+.lic-box-text .lb-num{
+  font-family:var(--serif);font-size:20px;font-weight:900;
+  color:var(--white);display:block;letter-spacing:0.06em;
+}
+/* FORM */
+.contact-form{display:flex;flex-direction:column;gap:3px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.form-field{position:relative}
+.form-field label{
+  position:absolute;top:9px;left:15px;
+  font-size:8px;font-weight:700;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--blue-light);
+  opacity:0.75;pointer-events:none;z-index:1;
+}
+.form-field input,
+.form-field select,
+.form-field textarea{
+  width:100%;background:var(--steel);border:none;
+  border-bottom:1px solid rgba(59,130,212,0.2);
+  padding:28px 15px 11px;
+  font-family:var(--sans);font-size:13px;
+  color:var(--white);outline:none;
+  transition:border-color var(--transition),background var(--transition);
+  -webkit-appearance:none;appearance:none;
+}
+.form-field select option{background:var(--steel);color:var(--white)}
+.form-field input::placeholder,
+.form-field textarea::placeholder{color:rgba(255,255,255,0.15)}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  border-bottom-color:var(--blue-light);
+  background:#222638;
+}
+.form-field textarea{min-height:110px;resize:vertical;line-height:1.6}
+.form-footer{
+  display:flex;align-items:center;
+  justify-content:space-between;padding-top:20px;
+  flex-wrap:wrap;gap:12px;
+}
+.form-note{
+  font-size:10px;color:var(--muted);
+  letter-spacing:0.04em;line-height:1.5;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#06070A;
+  border-top:1px solid rgba(26,58,107,0.3);
+  padding:48px 0 0;
+}
+.footer-main{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:48px;margin-bottom:48px;
+}
+.footer-brand{}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.footer-logo{height:40px;width:auto;opacity:0.85}
+.footer-brand-name{
+  font-family:var(--serif);font-size:15px;font-weight:800;
+  color:rgba(255,255,255,0.5);letter-spacing:0.06em;
+}
+.footer-brand p{
+  font-size:12px;line-height:1.8;
+  color:rgba(255,255,255,0.3);margin-bottom:20px;
+}
+.footer-badges{display:flex;flex-wrap:wrap;gap:6px}
+.fbadge{
+  font-size:8px;font-weight:700;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--blue-light);
+  border:1px solid rgba(59,130,212,0.25);
+  padding:5px 10px;
+}
+.footer-col h5{
+  font-family:var(--serif);font-size:14px;font-weight:800;
+  color:rgba(255,255,255,0.6);letter-spacing:0.08em;
+  margin-bottom:18px;text-transform:uppercase;
+}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px}
+.footer-col a{
+  font-size:12px;color:rgba(255,255,255,0.3);
+  transition:color var(--transition);
+}
+.footer-col a:hover{color:var(--blue-light)}
+.footer-bottom{
+  border-top:1px solid rgba(26,58,107,0.2);
+  padding:20px 0;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:10px;
+}
+.footer-copy{font-size:10px;color:rgba(255,255,255,0.18);letter-spacing:0.05em}
+.footer-lic{
+  font-size:10px;color:rgba(255,255,255,0.3);
+  letter-spacing:0.08em;
+}
+
+/* ===== FLOATING CTA ===== */
+#float-cta{
+  position:fixed;bottom:24px;right:24px;z-index:300;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end;
+}
+.float-call{
+  display:flex;align-items:center;gap:8px;
+  background:var(--red);color:var(--white);
+  padding:13px 22px;font-family:var(--sans);
+  font-size:13px;font-weight:700;letter-spacing:0.06em;
+  box-shadow:0 4px 24px rgba(192,57,43,0.4);
+  transition:background var(--transition),transform var(--transition);
+}
+.float-call:hover{background:var(--red-dark);transform:translateY(-2px)}
+.float-quote{
+  display:flex;align-items:center;gap:6px;
+  background:var(--blue);color:var(--white);
+  padding:10px 18px;font-size:11px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  box-shadow:0 4px 20px rgba(26,58,107,0.5);
+  transition:background var(--transition),transform var(--transition);
+}
+.float-quote:hover{background:var(--blue-mid);transform:translateY(-2px)}
+
+/* ===== MOBILE ===== */
+.mob-menu-btn{display:none}
+@media(max-width:900px){
+  .container{padding:0 20px}
+  .nav-inner{padding:0 20px}
+  .nav-menu,.nav-phone{display:none}
+  .mob-menu-btn{
+    display:flex;align-items:center;justify-content:center;
+    background:none;border:1px solid rgba(255,255,255,0.2);
+    width:38px;height:38px;cursor:pointer;color:var(--white);
+  }
+  .hero-inner{grid-template-columns:1fr;padding:40px 20px 60px}
+  .hero-visual{display:none}
+  .hero-stats{flex-wrap:wrap}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-header{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .proj-item{height:200px}
+  .proj-item.c6,.proj-item.c4,.proj-item.c5,.proj-item.c7,.proj-item.c3{grid-column:span 1}
+  .why-inner{grid-template-columns:1fr 1fr}
+  .why-card{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .areas-inner{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr 1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .btn-primary,.btn-secondary{width:100%;text-align:center}
+}
+@media(max-width:540px){
+  .svc-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr}
+  .hero-stats{gap:16px}
+  #float-cta{bottom:12px;right:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">
+      <img src="logo.png" alt="Franco's CNL Logo" class="nav-logo"
+           onerror="this.style.display='none'">
+      <div class="nav-brand-text">
+        <span class="name">FRANCO'S CNL</span>
+        <span class="sub">Construction & Restoration · Lic #1140292</span>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#why">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:3230000000" class="nav-phone">(323) 000-0000</a>
+      <a href="#contact" class="btn-nav">Free Quote</a>
+      <button class="mob-menu-btn" onclick="alert('Mobile menu — add your preferred JS nav here')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-stripes">
+      <div class="hero-stripe"></div><div class="hero-stripe"></div>
+      <div class="hero-stripe"></div><div class="hero-stripe"></div>
+      <div class="hero-stripe"></div><div class="hero-stripe"></div>
+      <div class="hero-stripe"></div><div class="hero-stripe"></div>
+      <div class="hero-stripe"></div><div class="hero-stripe"></div>
+    </div>
+    <div class="hero-glow-r"></div>
+    <div class="hero-glow-l"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <div class="badge-dot"></div>
+        <span>Serving Greater Los Angeles</span>
+      </div>
+      <h1 class="hero-h1 fade-up delay-1">
+        <span class="r">Built</span><br>
+        for <span class="b">California.</span><br>
+        Built to Last.
+      </h1>
+      <p class="hero-sub fade-up delay-2">Construction & Restoration · Est. Los Angeles</p>
+      <p class="hero-desc fade-up delay-2">Full-service licensed construction, remodeling, and restoration across LA County. From permits to final inspection — Franco's CNL delivers quality you can stand on.</p>
+      <div class="hero-btns fade-up delay-3">
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+        <a href="#projects" class="btn-secondary">See Our Work</a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div class="hstat">
+          <span class="n">18+</span>
+          <span class="l">Years in LA</span>
+        </div>
+        <div class="hstat">
+          <span class="n">400+</span>
+          <span class="l">Projects Completed</span>
+        </div>
+        <div class="hstat">
+          <span class="n">#1140292</span>
+          <span class="l">CA State License</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual fade-up delay-2">
+      <div class="hero-logo-ring"></div>
+      <div class="hero-logo-ring-2"></div>
+      <img
+        src="logo.png"
+        alt="Franco's CNL Construction & Restoration"
+        class="hero-logo-img"
+        onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ===== LICENSE BANNER ===== -->
+<div id="lic-banner">
+  <div class="lic-ticker">
+    <div class="lic-ticker-inner">
+      <div class="lic-item"><div class="lic-dot"></div><span>CA Contractors License</span><span class="hl">#1140292</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Fully Licensed & Insured</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Serving All of LA County</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Free Estimates</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>24-Hour Response</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>18+ Years Experience</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Emergency Restoration Available</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="lic-item"><div class="lic-dot"></div><span>CA Contractors License</span><span class="hl">#1140292</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Fully Licensed & Insured</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Serving All of LA County</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Free Estimates</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>24-Hour Response</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>18+ Years Experience</span></div>
+      <div class="lic-item"><div class="lic-dot"></div><span>Emergency Restoration Available</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <div class="svc-header">
+      <div>
+        <div class="sec-eyebrow"><div class="bar"></div><span>What We Do</span></div>
+        <h2 class="sec-title">Every Service.<br><span class="hl">Done Right.</span></h2>
+      </div>
+      <p class="svc-header-desc">From foundation to rooftop — Franco's CNL is licensed, insured, and accountable on every job in Los Angeles. One crew, one standard of quality.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="svc-card-num">01</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Full Home Remodeling</h3>
+        <p>Complete interior & exterior transformations — open-plan conversions, room additions, and whole-home renovations with all permits handled from day one.</p>
+        <span class="svc-more">Learn More →</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card-num">02</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Kitchen & Bathroom</h3>
+        <p>Luxury upgrades built to code. Custom cabinetry, tile work, plumbing, and electrical — fully coordinated by one crew, beautifully executed.</p>
+        <span class="svc-more">Learn More →</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card-num">03</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+            <line x1="12" y1="22" x2="12" y2="15.5"/>
+            <polyline points="22 8.5 12 15.5 2 8.5"/>
+          </svg>
+        </div>
+        <h3>Structural Framing</h3>
+        <p>Wood & steel framing for new builds, additions, and seismic retrofits. Engineered to LA County code and built for California's demands.</p>
+        <span class="svc-more">Learn More →</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card-num">04</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 20h20M4 20V10l8-8 8 8v10"/>
+          </svg>
+        </div>
+        <h3>Roofing & Waterproofing</h3>
+        <p>Flat & pitched roof installation, repair, and replacement. Full waterproofing systems for decks, foundations, and retaining walls.</p>
+        <span class="svc-more">Learn More →</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card-num">05</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 12h8"/><path d="M12 8v8"/>
+          </svg>
+        </div>
+        <h3>ADU Construction</h3>
+        <p>Backyard units, garage conversions, and detached builds — turnkey and permit-ready to maximize your property value throughout LA County.</p>
+        <span class="svc-more">Learn More →</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card-num">06</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Fire & Water Restoration</h3>
+        <p>Emergency response available. We coordinate with insurance, handle demolition, rebuild, and restore your property to better than before.</p>
+        <span class="svc-more">Learn More →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS / GALLERY ===== -->
+<section id="projects">
+  <div class="container">
+    <div class="proj-header">
+      <div>
+        <div class="sec-eyebrow"><div class="bar"></div><span>Our Work</span></div>
+        <h2 class="sec-title">Before &amp; After.<br><span class="hl">Real Results.</span></h2>
+      </div>
+      <p class="proj-note">Real homes. Real clients. Real transformations across Los Angeles County.</p>
+    </div>
+    <div class="proj-grid">
+      <!-- Row 1 -->
+      <div class="proj-item p1 c6">
+        <div class="p-bg"></div><div class="p-pattern"></div>
+        <div class="p-overlay"></div>
+        <div class="ba-tag">Before → After</div>
+        <div class="p-label">
+          <span class="p-type">Full Renovation · Silver Lake</span>
+          <span class="p-name lg">1940s Craftsman Gut Remodel</span>
+        </div>
+      </div>
+      <div class="proj-item p2 c3">
+        <div class="p-bg"></div><div class="p-pattern"></div>
+        <div class="p-overlay"></div>
+        <div class="p-label">
+          <span class="p-type">Kitchen · Brentwood</span>
+          <span class="p-name">Estate Kitchen</span>
+        </div>
+      </div>
+      <div class="proj-item p3 c3">
+        <div class="p-bg"></div><div class="p-pattern"></div>
+        <div class="p-overlay"></div>
+        <div class="ba-tag">Before → After</div>
+        <div class="p-label">
+          <span class="p-type">Restoration · Pasadena</span>
+          <span class="p-name">Fire Damage Rebuild</span>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="proj-item p4 c4">
+        <div class="p-bg"></div><div class="p-pattern"></div>
+        <div class="p-overlay"></div>
+        <div class="p-label">
+          <span class="p-type">ADU · Glendale</span>
+          <span class="p-name">Backyard Unit Build</span>
+        </div>
+      </div>
+      <div class="proj-item p5 c4">
+        <div class="p-bg"></div><div class="p-pattern"></div>
+        <div class="p-overlay"></div>
+        <div class="p-label">
+          <span class="p-type">Roofing · Sherman Oaks</span>
+          <span class="p-name">Flat Roof System</span>
+        </div>
+      </div>
+      <div class="proj-item p1 c4">
+        <div class="p-bg"></div><div class="p-pattern" style="background:repeating-linear-gradient(60deg,transparent,transparent 8px,rgba(255,255,255,0.08) 8px,rgba(255,255,255,0.08) 9px)"></div>
+        <div class="p-overlay"></div>
+        <div class="ba-tag">Before → After</div>
+        <div class="p-label">
+          <span class="p-type">Bathroom · Burbank</span>
+          <span class="p-name">Master Bath Remodel</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-cta">
+      <p>Replace placeholder tiles above with your real project photos for maximum impact.</p>
+      <a href="#contact" class="btn-primary">Discuss Your Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section id="why">
+  <div class="why-inner">
+    <div class="why-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </div>
+      <h4>CA Licensed</h4>
+      <span class="why-lic">Lic #1140292</span>
+      <p>Verified with the California State Contractors Licensing Board. No unlicensed shortcuts — ever.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0110 0v4"/>
+        </svg>
+      </div>
+      <h4>Fully Insured</h4>
+      <p>$2M general liability + workers' compensation on every crew member, every job, every single day.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-big">18+</span>
+      <h4>Years in Los Angeles</h4>
+      <p>Built on referrals since day one. Nearly two decades serving homeowners across every LA neighborhood.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <h4>On-Time. On-Budget.</h4>
+      <p>Written contracts. Transparent pricing. Detailed timelines we actually keep — no hidden fees, no surprise costs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process">
+  <div class="container">
+    <div class="sec-eyebrow"><div class="bar"></div><span>How It Works</span></div>
+    <h2 class="sec-title" style="margin-top:14px;margin-bottom:0">Simple Process.<br><span class="hl">Zero Stress.</span></h2>
+    <div class="process-grid">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <div class="proc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <h3>Call or Request Online</h3>
+        <p>Reach out by phone, text, or fill out our quote form. We respond within 24 hours — often the same day.</p>
+        <div class="proc-connector"></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <div class="proc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3>Free On-Site Estimate</h3>
+        <p>Franco visits your property, assesses the scope, and provides a detailed written estimate — completely free and no-obligation.</p>
+        <div class="proc-connector"></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <div class="proc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <h3>Contract & Permits</h3>
+        <p>We handle all permits, paperwork, and city filings. You sign a transparent written contract with clear scope, timeline, and pricing.</p>
+        <div class="proc-connector"></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <div class="proc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h3>Build & Final Walkthrough</h3>
+        <p>Our crew executes the work with precision. We do a final walkthrough together — nothing is signed off until you're 100% satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="reviews">
+  <div class="container">
+    <div class="sec-eyebrow"><div class="bar"></div><span>Client Reviews</span></div>
+    <h2 class="sec-title" style="margin-top:14px">What Los Angeles<br><span class="hl">Homeowners Say</span></h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-flag"></div>
+        <div class="review-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <div class="review-quote">Franco's team completely transformed our 1940s bungalow in Silver Lake. The attention to detail was extraordinary — they treated our home like it was their own. Finished two weeks ahead of schedule.</div>
+        <div class="review-author">
+          <div class="author-av">MR</div>
+          <div>
+            <span class="author-name">Maria R.</span>
+            <span class="author-loc">Silver Lake, Los Angeles</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-flag"></div>
+        <div class="review-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <div class="review-quote">After the fire, we were completely devastated. CNL handled everything — insurance coordination, permits, demolition, rebuild. We moved back into a better home than we had before.</div>
+        <div class="review-author">
+          <div class="author-av">DK</div>
+          <div>
+            <span class="author-name">David & Janet K.</span>
+            <span class="author-loc">Pasadena, CA</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-flag"></div>
+        <div class="review-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <div class="review-quote">Hired Franco's for a backyard ADU — seamless from permits to final finish. Our property value went up significantly. Already planning to use them again for our kitchen remodel.</div>
+        <div class="review-author">
+          <div class="author-av">TC</div>
+          <div>
+            <span class="author-name">Thomas C.</span>
+            <span class="author-loc">Glendale, CA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE AREAS ===== -->
+<section id="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div>
+        <div class="sec-eyebrow"><div class="bar"></div><span>Where We Work</span></div>
+        <h2 class="sec-title" style="font-size:clamp(28px,3vw,42px)">Serving All of<br><span class="hl">Los Angeles County</span></h2>
+      </div>
+      <div class="areas-list">
+        <span class="area-tag">Los Angeles</span>
+        <span class="area-tag">Silver Lake</span>
+        <span class="area-tag">Pasadena</span>
+        <span class="area-tag">Glendale</span>
+        <span class="area-tag">Burbank</span>
+        <span class="area-tag">Sherman Oaks</span>
+        <span class="area-tag">Brentwood</span>
+        <span class="area-tag">Studio City</span>
+        <span class="area-tag">West Hollywood</span>
+        <span class="area-tag">Culver City</span>
+        <span class="area-tag">Encino</span>
+        <span class="area-tag">Woodland Hills</span>
+        <span class="area-tag">Torrance</span>
+        <span class="area-tag">Long Beach</span>
+        <span class="area-tag">Alhambra</span>
+        <span class="area-tag">Arcadia</span>
+        <span class="area-tag">Monterey Park</span>
+        <span class="area-tag">Whittier</span>
+        <span class="area-tag">Downey</span>
+        <span class="area-tag">Pomona</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="sec-eyebrow"><div class="bar"></div><span>Get Started</span></div>
+        <h2>Ready to <span class="hl">Build?</span><br>Let's Talk.</h2>
+        <p>Tell us your project, timeline, and budget — we'll respond within 24 hours with a detailed free estimate. No pressure, no obligation, no runaround.</p>
+        <div class="contact-detail">
+          <div class="c-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="c-label">Call or Text</span>
+            <span class="c-value"><a href="tel:3230000000">(323) 000-0000</a></span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22 6 12 13 2 6"/>
+            </svg>
+          </div>
+          <div>
+            <span class="c-label">Email</span>
+            <span class="c-value"><a href="mailto:info@francocnl.com">info@francocnl.com</a></span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="c-label">Service Area</span>
+            <span class="c-value">Greater Los Angeles County, CA</span>
+          </div>
+        </div>
+        <div class="lic-box">
+          <img src="logo.png" alt="Franco's CNL Logo" onerror="this.style.display='none'">
+          <div class="lic-box-text">
+            <span class="lb-label">CA Contractors License</span>
+            <span class="lb-num">#1140292</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" name="first" required>
+          </div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" name="last" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" required>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Service Needed</label>
+          <select name="service" required>
+            <option value="" disabled selected></option>
+            <option>Full Home Remodel</option>
+            <option>Kitchen or Bathroom</option>
+            <option>ADU Construction</option>
+            <option>Roofing & Waterproofing</option>
+            <option>Structural Framing</option>
+            <option>Fire / Water Restoration</option>
+            <option>Seismic Retrofit</option>
+            <option>Other / Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Project Address or City</label>
+          <input type="text" name="address">
+        </div>
+        <div class="form-field">
+          <label>Tell Us About Your Project</label>
+          <textarea name="message" placeholder="Describe your project, timeline, and rough budget range..."></textarea>
+        </div>
+        <div class="form-footer">
+          <span class="form-note">Free estimate · 24-hr response<br>No obligation · Lic #1140292</span>
+          <button type="submit" class="btn-primary">Send Request →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="logo.png" alt="Logo" class="footer-logo" onerror="this.style.display='none'">
+          <span class="footer-brand-name">FRANCO'S CNL</span>
+        </div>
+        <p>Full-service construction and restoration serving Greater Los Angeles since 2007. Licensed, insured, and built on referrals.</p>
+        <div class="footer-badges">
+          <span class="fbadge">CA Lic #1140292</span>
+          <span class="fbadge">Fully Insured</span>
+          <span class="fbadge">LA County</span>
+          <span class="fbadge">Free Estimates</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Full Home Remodeling</a></li>
+          <li><a href="#services">Kitchen & Bathroom</a></li>
+          <li><a href="#services">Structural Framing</a></li>
+          <li><a href="#services">Roofing & Waterproofing</a></li>
+          <li><a href="#services">ADU Construction</a></li>
+          <li><a href="#services">Fire & Water Restoration</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">About Franco's CNL</a></li>
+          <li><a href="#projects">Our Projects</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:3230000000">(323) 000-0000</a></li>
+          <li><a href="mailto:info@francocnl.com">info@francocnl.com</a></li>
+          <li><a href="#contact">Free Quote Form</a></li>
+          <li style="margin-top:12px;color:rgba(255,255,255,0.25);font-size:11px;cursor:default">Los Angeles, CA</a></li>
+          <li style="color:rgba(255,255,255,0.25);font-size:11px;cursor:default">Mon–Sat: 7am – 6pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Franco's CNL Construction & Restoration. All rights reserved.</span>
+      <span class="footer-lic">CA Contractors License #1140292 · Fully Licensed & Insured · Greater Los Angeles</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING CTA ===== -->
+<div id="float-cta">
+  <a href="#contact" class="float-quote">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+    </svg>
+    Free Quote
+  </a>
+  <a href="tel:3230000000" class="float-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+    </svg>
+    (323) 000-0000
+  </a>
+</div>
+
+<script>
+// Navbar scroll behavior
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Form handler — replace with your actual backend / Formspree / EmailJS
+function handleForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.style.opacity = '0.7';
+  // TODO: Replace with fetch() to Formspree, EmailJS, or your backend
+  // Example Formspree: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(e.target) })
+  setTimeout(() => {
+    btn.textContent = '✓ Sent! We\'ll be in touch within 24hrs.';
+    btn.style.background = '#1A6B3A';
+    e.target.reset();
+  }, 1200);
+}
+
+// Fade-in on scroll (lightweight IntersectionObserver)
+const fadeEls = document.querySelectorAll('.svc-card, .proj-item, .why-card, .proc-step, .review-card, .area-tag');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+fadeEls.forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity 0.5s ease ${(i % 6) * 0.07}s, transform 0.5s ease ${(i % 6) * 0.07}s, background 0.28s`;
+  io.observe(el);
+});
+</script>
+</body>
+</html>
