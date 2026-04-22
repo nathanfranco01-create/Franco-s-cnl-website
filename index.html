@@ -1,62 +1,42 @@
-<!-- ===== PROJECTS / GALLERY ===== -->
-<section id="projects">
-  <div class="container">
+/* ===== PROJECTS GRID ===== */
 
-    <!-- HEADER -->
-    <div>
-      <div class="sec-eyebrow">
-        <div class="bar"></div>
-        <span>Our Work</span>
-      </div>
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
 
-      <h2 class="sec-title">
-        Before &amp; After.<br>
-        <span class="hl">Real Results.</span>
-      </h2>
+.proj-grid div {
+  overflow: hidden;
+  border-radius: 12px;
+}
 
-      <p class="proj-note">
-        Real homes. Real clients. Real transformations across Los Angeles County.
-      </p>
-    </div>
+.proj-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 
-    <!-- IMAGE GRID -->
-    <div class="proj-grid">
+.proj-grid div:hover img {
+  transform: scale(1.05);
+}
 
-      <div>
-        <img src="images/IMG_1413.PNG" alt="Project 1" style="width:100%;border-radius:12px;">
-      </div>
+/* Tablet */
+@media (max-width: 900px) {
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-      <div>
-        <img src="images/IMG_1498.jpg" alt="Project 2" style="width:100%;border-radius:12px;">
-      </div>
+/* Mobile */
+@media (max-width: 600px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-      <div>
-        <img src="images/IMG_1602.jpg" alt="Project 3" style="width:100%;border-radius:12px;">
-      </div>
-
-      <div>
-        <img src="images/IMG_1608.jpg" alt="Project 4" style="width:100%;border-radius:12px;">
-      </div>
-
-      <div>
-        <img src="images/IMG_1617.WEBP" alt="Project 5" style="width:100%;border-radius:12px;">
-      </div>
-
-      <div>
-        <img src="images/IMG_1745.jpg" alt="Project 6" style="width:100%;border-radius:12px;">
-      </div>
-
-      <div>
-        <img src="images/IMG_1768.jpg" alt="Project 7" style="width:100%;border-radius:12px;">
-      </div>
-
-    </div>
-
-    <!-- CTA -->
-    <div class="proj-cta">
-      <p>Replace placeholder tiles above with your real project photos for maximum impact.</p>
-      <a href="#contact" class="btn-primary">Discuss Your Project</a>
-    </div>
-
-  </div>
-</section>
+.proj-cta {
+  margin-top: 50px;
+  text-align: center;}
