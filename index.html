@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Franco's CNL Construction & Restoration — Licensed Los Angeles contractor for remodeling, restoration, framing, roofing, ADUs, and more." />
+  <meta
+    name="description"
+    content="Franco's CNL Construction & Restoration — Licensed Los Angeles contractor for remodeling, restoration, framing, roofing, ADUs, and more."
+  />
   <title>Franco's CNL Construction & Restoration</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -381,7 +387,11 @@
       gap: 32px;
     }
 
-    .svc-header { grid-template-columns: 1fr 1fr; align-items: end; margin-bottom: 50px; }
+    .svc-header {
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      margin-bottom: 50px;
+    }
 
     .svc-grid {
       display: grid;
@@ -922,6 +932,7 @@
       .nav-menu { display: none; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-stats { grid-template-columns: 1fr; }
+
       .svc-grid,
       .reviews-grid,
       .process-grid,
@@ -1223,22 +1234,22 @@
         <div class="form-row">
           <div class="form-field">
             <label for="first">First Name</label>
-            <input id="first" type="text" name="first" required placeholder="First name" autocomplete="given-name">
+            <input id="first" type="text" name="first" required placeholder="First name">
           </div>
           <div class="form-field">
             <label for="last">Last Name</label>
-            <input id="last" type="text" name="last" required placeholder="Last name" autocomplete="family-name">
+            <input id="last" type="text" name="last" required placeholder="Last name">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-field">
             <label for="phone">Phone Number</label>
-            <input id="phone" type="tel" name="phone" required placeholder="(123) 456-7890" autocomplete="tel">
+            <input id="phone" type="tel" name="phone" required placeholder="(123) 456-7890">
           </div>
           <div class="form-field">
             <label for="email">Email Address</label>
-            <input id="email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+            <input id="email" type="email" name="email" required placeholder="you@example.com">
           </div>
         </div>
 
@@ -1258,7 +1269,7 @@
 
         <div class="form-field">
           <label for="address">Project Address or City</label>
-          <input id="address" type="text" name="address" placeholder="Project city or address" autocomplete="street-address">
+          <input id="address" type="text" name="address" placeholder="Project city or address">
         </div>
 
         <div class="form-field">
@@ -1346,7 +1357,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     const EMAILJS_PUBLIC_KEY = 'YlQgC-S1KavssfMku';
-    const EMAILJS_SERVICE_ID = 'service_2h2w1fa';
+    const EMAILJS_SERVICE_ID = 'service_zn2w1fa';
     const EMAILJS_TEMPLATE_ID = 'template_3g2jvOI';
 
     emailjs.init({
@@ -1362,10 +1373,8 @@
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.textContent;
         const firstName = contactForm.elements['first'].value.trim() || 'there';
-
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
-
         emailjs.sendForm(
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
@@ -1377,18 +1386,16 @@
           submitButton.textContent = originalButtonText;
         }).catch(function (error) {
           console.error('EmailJS error:', error);
-          alert('Sorry, there was a problem sending your request. Please call us at (213) 239-3604 or email francoscnl@outlook.com.');
+          alert('EmailJS error: ' + (error?.text || error?.message || 'Unknown error'));
           submitButton.disabled = false;
           submitButton.textContent = originalButtonText;
         });
       });
     }
-
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
     const galleryItems = document.querySelectorAll('.gallery-item');
-
     galleryItems.forEach(function (item) {
       item.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1404,11 +1411,9 @@
       lightbox.setAttribute('aria-hidden', 'true');
       lightboxImg.src = '';
     }
-
     if (lightboxClose) {
       lightboxClose.addEventListener('click', closeLightbox);
     }
-
     if (lightbox) {
       lightbox.addEventListener('click', function (e) {
         if (e.target === lightbox) {
@@ -1416,9 +1421,8 @@
         }
       });
     }
-
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
         closeLightbox();
       }
     });
