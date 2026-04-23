@@ -484,9 +484,7 @@
       margin-top: 34px;
     }
 
-    .proj-cta p {
-      margin-bottom: 18px;
-    }
+    .proj-cta p { margin-bottom: 18px; }
 
     .why-grid {
       display: grid;
@@ -1373,8 +1371,10 @@
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.textContent;
         const firstName = contactForm.elements['first'].value.trim() || 'there';
+
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
+
         emailjs.sendForm(
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
@@ -1392,10 +1392,12 @@
         });
       });
     }
+
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
     const galleryItems = document.querySelectorAll('.gallery-item');
+
     galleryItems.forEach(function (item) {
       item.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1411,9 +1413,11 @@
       lightbox.setAttribute('aria-hidden', 'true');
       lightboxImg.src = '';
     }
+
     if (lightboxClose) {
       lightboxClose.addEventListener('click', closeLightbox);
     }
+
     if (lightbox) {
       lightbox.addEventListener('click', function (e) {
         if (e.target === lightbox) {
@@ -1421,6 +1425,7 @@
         }
       });
     }
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
         closeLightbox();
