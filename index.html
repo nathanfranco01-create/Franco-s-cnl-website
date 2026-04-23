@@ -1173,7 +1173,7 @@
         <div class="contact-detail">
           <div>
             <span class="c-label">Email</span>
-            <span class="c-value"><a href="mailto:francoscnl@gmail.com">francoscnl@gmail.com</a></span>
+            <span class="c-value"><a href="mailto:francoscnl@outlook.com">francoscnl@gmail.com</a></span>
           </div>
         </div>
 
@@ -1292,7 +1292,7 @@
           <h5>Contact</h5>
           <ul>
             <li><a href="tel:2132393604">(213) 239-3604</a></li>
-            <li><a href="mailto:francoscnl@gmail.com">francoscnl@gmail.com</a></li>
+            <li><a href="mailto:francoscnl@outlook.com">francoscnl@gmail.com</a></li>
             <li><a href="#contact">Request a Quote</a></li>
           </ul>
         </div>
@@ -1319,9 +1319,29 @@
 
   <script>
     function handleForm(event) {
-      event.preventDefault();
-      alert("Thanks — your request form is ready. Next step: connect this form to Formspree, Netlify Forms, or your email service.");
-    }
+  event.preventDefault();
+
+  const form = event.target;
+  const firstName = form.first.value;
+
+  // simple confirmation message to user
+  alert("Thanks " + firstName + "! Your request has been received. We will contact you shortly.");
+
+  // OPTIONAL: open email draft so you also receive the info
+  const subject = "New Project Request - Franco's CNL";
+  const body = `Name: ${form.first.value} ${form.last.value}
+Phone: ${form.phone.value}
+Email: ${form.email.value}
+Service: ${form.service.value}
+Address: ${form.address.value}
+
+Message:
+${form.message.value}`;
+
+  window.location.href = `mailto:francoscnl@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  form.reset();
+}
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
