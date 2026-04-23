@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Franco's CNL Construction & Restoration — Licensed Los Angeles contractor for remodeling, restoration, framing, roofing, ADUs, and more." />
   <title>Franco's CNL Construction & Restoration</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -23,13 +25,13 @@
       --red-dark: #922b21;
       --blue: #1a3a6b;
       --blue-light: #4f8fe8;
-      --max: 1240px;
       --shadow: 0 20px 50px rgba(0,0,0,0.35);
       --serif: 'Barlow Condensed', sans-serif;
       --sans: 'Barlow', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
+
     body {
       font-family: var(--sans);
       background: var(--bg);
@@ -808,7 +810,11 @@
       color: white;
     }
 
-    .footer-col ul { list-style: none; display: grid; gap: 10px; }
+    .footer-col ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
 
     .footer-bottom {
       display: flex;
@@ -1217,7 +1223,7 @@
         </div>
       </div>
 
-      <form class="contact-form" id="contact-form" onsubmit="handleForm(event)">
+      <form class="contact-form" id="contact-form">
         <div class="form-row">
           <div class="form-field">
             <label>First Name</label>
@@ -1343,43 +1349,49 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    function handleForm(event) {
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const EMAILJS_SERVICE_ID = 'service_2h2w1fa';
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+    emailjs.init({
+      publicKey: EMAILJS_PUBLIC_KEY
+    });
+
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      const form = event.target;
-      const submitButton = form.querySelector('button[type="submit"]');
+      const submitButton = contactForm.querySelector('button[type="submit"]');
       const originalButtonText = submitButton.textContent;
-      const firstName = form.first.value.trim() || 'there';
+      const firstName = contactForm.elements['first'].value.trim() || 'there';
 
       submitButton.disabled = true;
       submitButton.textContent = 'Sending...';
 
-      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, '#contact-form').then(
-        function () {
-          alert('Thanks ' + firstName + '! Your request has been sent successfully. We will contact you shortly.');
-          form.reset();
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
-        },
-        function (error) {
-          console.error('EmailJS error:', error);
-          alert('Sorry, there was a problem sending your request. Please call us at (213) 239-3604 or email francoscnl@outlook.com.');
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
-        }
-      );
-    }
+      emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        '#contact-form'
+      ).then(function () {
+        alert('Thanks ' + firstName + '! Your request has been sent successfully. We will contact you shortly.');
+        contactForm.reset();
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }).catch(function (error) {
+        console.error('EmailJS error:', error);
+        alert('Sorry, there was a problem sending your request. Please call us at (213) 239-3604 or email francoscnl@outlook.com.');
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      });
+    });
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
-    galleryItems.forEach(item => {
+    galleryItems.forEach(function (item) {
       item.addEventListener('click', function (e) {
         e.preventDefault();
         const fullImage = this.getAttribute('href');
@@ -1396,8 +1408,11 @@ const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
     }
 
     lightboxClose.addEventListener('click', closeLightbox);
+
     lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) closeLightbox();
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
     });
 
     document.addEventListener('keydown', function (e) {
